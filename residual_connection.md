@@ -19,6 +19,29 @@ Imagine you're trying to build the world's tallest LEGO tower. Intuitively, you'
 
 This wasn't just counterintuitive—it was a fundamental barrier to progress in artificial intelligence.
 
+### Traditional Neural Networks (Without Residual Connections)
+
+First, let's understand what we had before residual connections.
+
+In a traditional neural network, information flows through layers sequentially:
+
+```
+x₁ = F(x₀, W₀)
+x₂ = F(x₁, W₁)
+x₃ = F(x₂, W₂)
+...
+```
+
+Where:
+- **x₀** is your input (like an image)
+- **F** is some transformation (convolution, matrix multiplication, etc.)
+- **W** represents the learnable parameters (weights)
+- Each layer completely transforms the input from the previous layer
+
+**The Problem:** When you stack many layers (say 50 or 100), two bad things happen:
+1. **Vanishing gradients**: The learning signal gets weaker and weaker as it flows backward during training
+2. **Degradation**: Surprisingly, deeper networks sometimes perform worse than shallow ones
+
 ### What Are Residual Connections?
 
 Residual connections (or "skip connections") were introduced in 2016 with ResNets, and they revolutionized how we build neural networks. The core idea is elegantly simple: instead of forcing each layer to learn the complete transformation of its input, let it learn just the **residual** (the difference or adjustment).
@@ -36,20 +59,6 @@ Let me break this down:
 - **F(x_l, W_l)**: The residual function—what the layer learns to add or adjust
 - **x_{l+1}**: The output, which is the input PLUS the adjustment
 - The **"+ x_l"** part is the skip connection (identity mapping)
-
-#### A Real-World Analogy
-
-Think of photo editing:
-
-**Without residual connections:**
-- The layer learns: "The output brightness should be 180"
-
-**With residual connections:**
-- Input brightness: 150
-- Layer learns: "Add +30 to the brightness"
-- Output: 150 + 30 = 180
-
-The second approach is much easier because the layer only needs to learn small adjustments rather than the complete transformation!
 
 ### The Power of Stacking Layers
 
