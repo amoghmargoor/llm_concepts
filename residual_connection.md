@@ -1,6 +1,6 @@
-# Understanding Residual Connections: From Basics to DeepSeek's Innovation
+# Understanding Residual Connections and Vanishing Gradient: From Basics to DeepSeek's Manifold-Constrained Hyper-Connections
 
-*A beginner-friendly guide to one of deep learning's most important breakthroughs*
+*A beginner-friendly guide to one of deep learning's basic concept that relates to recent DeepSeek's paper: https://arxiv.org/abs/2512.24880. Note the paper is only briefly discussed towards the end and not really for audience that knows the basics of Residual connections and Gradients. This blog is also fully recreated by LLM (Claude) and only for beginners with probably no background in deep learning.*
 
 ---
 
