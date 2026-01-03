@@ -8,7 +8,7 @@
 1. [Residual Connections](#residual-connections)
 2. [Understanding Gradients: How Neural Networks Learn](#gradients)
 3. [Hyper Connections](#hyperconnection)
-4. [DeepSeek's Manifold Constrained Hyper-Connections] (#mhc)
+4. [DeepSeek's Manifold Constrained Hyper-Connections](#mhc)
 
 ---
 
